@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @ToString
 @Data
 @Entity
-@Table(name = "kafka")
+@Table(name = "kafkauser")
 public class KafkaModel {
 
     @Id

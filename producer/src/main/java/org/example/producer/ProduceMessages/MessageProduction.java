@@ -16,7 +16,7 @@ public class MessageProduction {
 
     public void sendmessage() {
         count++;
-        CompletableFuture<SendResult<String,String>>future=this.kafkaTemplate.send("no_of_visits", "No of people visited this route is"+count);
+        CompletableFuture<SendResult<String,String>>future=this.kafkaTemplate.send("no_of_visits", ""+count);
         try {
             future.whenComplete((res,ex)->{
                if(ex==null){
